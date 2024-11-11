@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบเลือกโต๊ะและสั่งอาหาร</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>เลือกโต๊ะ</h1>
+    <div id="table-selection">
+        <button class="table" onclick="selectTable(1)">โต๊ะ 1</button>
+        <button class="table" onclick="selectTable(2)">โต๊ะ 2</button>
+        <button class="table" onclick="selectTable(3)">โต๊ะ 3</button>
+    </div>
+
+    <div id="menu-section" style="display:none;">
+        <h2 id="menu-header"></h2>
+        <p>เลือกอาหาร:</p>
+        <button onclick="orderFood('อาหารจาน 1', 100)">อาหารจาน 1 - 100 บาท</button>
+        <button onclick="orderFood('อาหารจาน 2', 150)">อาหารจาน 2 - 150 บาท</button>
+        <button onclick="orderFood('อาหารจาน 3', 200)">อาหารจาน 3 - 200 บาท</button>
+
+        <p>เลือกเครื่องดื่ม:</p>
+        <button onclick="orderDrink('น้ำเปล่า', 30)">น้ำเปล่า - 30 บาท</button>
+        <button onclick="orderDrink('น้ำส้ม', 50)">น้ำส้ม - 50 บาท</button>
+        <button onclick="orderDrink('น้ำชา', 40)">น้ำชา - 40 บาท</button>
+
+        <button onclick="finishOrder()">เสร็จสิ้นการสั่ง</button>
+        <button onclick="showBillForCurrentTable()">แสดงรายการและชำระเงิน</button>
+    </div>
+
+    <div id="bill-section" style="display:none;">
+        <h2>รายการสั่งอาหารและเครื่องดื่ม</h2>
+        <div id="bill-details"></div>
+        <button onclick="payOrder()">ชำระเงิน</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

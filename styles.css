@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;  /* ทำให้ปุ่มเต็มความกว้างในมือถือ */
+}
+
+#menu-section, #bill-section {
+    margin-top: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+/* ปรับแต่งสำหรับหน้าจอมือถือ */
+@media (max-width: 600px) {
+    button {
+        font-size: 14px; /* ลดขนาดฟอนต์ให้เล็กลง */
+        padding: 10px 15px; /* ปรับขนาดปุ่มให้พอดีกับหน้าจอเล็ก */
+    }
+
+    h1, h2 {
+        font-size: 20px; /* ขนาดตัวอักษรในหัวข้อเล็กลงสำหรับมือถือ */
+    }
+
+    #menu-section, #bill-section {
+        padding: 10px; /* เพิ่ม padding เพื่อไม่ให้เนื้อหาชิดขอบ */
+    }
+}
+
+/* ปรับแต่งสำหรับหน้าจอขนาดใหญ่ เช่น คอมพิวเตอร์ */
+@media (min-width: 601px) {
+    button {
+        font-size: 18px; /* เพิ่มขนาดฟอนต์บนคอมพิวเตอร์ */
+        padding: 12px 25px; /* ขนาดปุ่มใหญ่ขึ้นบนคอมพิวเตอร์ */
+    }
+}
